@@ -2,7 +2,12 @@
 let grid = document.querySelector(".grid");
 grid.addEventListener("click", function(){
     let sides = prompt("Enter the number of sides.");
-    makeGrid(sides);
+    if (  sides > 0 && sides <= 100) {
+        makeGrid(sides);
+    } else {
+        alert("Number of sides should be from 1 to 100.")     
+    }
+   
 });
 
 function makeGrid(sides=16) {
